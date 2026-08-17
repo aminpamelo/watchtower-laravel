@@ -1,6 +1,6 @@
 <?php
 
-namespace Bedaie\Watchtower;
+namespace Pantau\Watchtower;
 
 class Watchtower
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Bedaie\Watchtower\Support;
+namespace Pantau\Watchtower\Support;
 
 /**
  * Client side scrubbing (Section 3.7). Runs on request input, headers, and

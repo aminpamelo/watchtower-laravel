@@ -1,5 +1,5 @@
 {
-    "name": "bedaie/watchtower-laravel",
+    "name": "pantau/watchtower-laravel",
     "description": "Watchtower monitoring SDK for Laravel applications",
     "type": "library",
     "license": "MIT",
@@ -10,13 +10,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Bedaie\\Watchtower\\": "src/"
+            "Pantau\\Watchtower\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Bedaie\\Watchtower\\WatchtowerServiceProvider"
+                "Pantau\\Watchtower\\WatchtowerServiceProvider"
             ]
         }
     },

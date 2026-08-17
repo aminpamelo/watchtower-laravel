@@ -1,8 +1,8 @@
 <?php
 
-namespace Bedaie\Watchtower\Listeners;
+namespace Pantau\Watchtower\Listeners;
 
-use Bedaie\Watchtower\Recorder;
+use Pantau\Watchtower\Recorder;
 use Illuminate\Queue\Events\JobFailed;
 use Illuminate\Queue\Events\JobProcessed;
 use Illuminate\Queue\Events\JobProcessing;
@@ -22,7 +22,7 @@ class JobListener
         try {
             $jobName = is_object($event->job) ? $event->job::class : (string) $event->job;
 
-            if (str_starts_with($jobName, 'Bedaie\\Watchtower\\')) {
+            if (str_starts_with($jobName, 'Pantau\\Watchtower\\')) {
                 return;
             }
 
@@ -95,6 +95,6 @@ class JobListener
      */
     private function isOwnJob(string $jobClass): bool
     {
-        return str_starts_with($jobClass, 'Bedaie\\Watchtower\\');
+        return str_starts_with($jobClass, 'Pantau\\Watchtower\\');
     }
 }

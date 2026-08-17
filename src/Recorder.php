@@ -1,13 +1,13 @@
 <?php
 
-namespace Bedaie\Watchtower;
+namespace Pantau\Watchtower;
 
-use Bedaie\Watchtower\Jobs\SendEventBatch;
-use Bedaie\Watchtower\Support\CircuitBreaker;
-use Bedaie\Watchtower\Support\ReleaseDetector;
-use Bedaie\Watchtower\Support\Scrubber;
-use Bedaie\Watchtower\Support\Spool;
-use Bedaie\Watchtower\Support\StackTraceParser;
+use Pantau\Watchtower\Jobs\SendEventBatch;
+use Pantau\Watchtower\Support\CircuitBreaker;
+use Pantau\Watchtower\Support\ReleaseDetector;
+use Pantau\Watchtower\Support\Scrubber;
+use Pantau\Watchtower\Support\Spool;
+use Pantau\Watchtower\Support\StackTraceParser;
 use ErrorException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -449,7 +449,7 @@ class Recorder
     public function envelope(array $events): array
     {
         return [
-            'sdk' => ['name' => 'bedaie/watchtower-laravel', 'version' => Watchtower::VERSION],
+            'sdk' => ['name' => 'pantau/watchtower-laravel', 'version' => Watchtower::VERSION],
             'environment' => (string) config('watchtower.environment'),
             'release' => $this->releaseDetector->detect(),
             'server' => [

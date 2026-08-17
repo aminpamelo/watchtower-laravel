@@ -1,6 +1,6 @@
 <?php
 
-namespace Bedaie\Watchtower\Commands;
+namespace Pantau\Watchtower\Commands;
 
 use Illuminate\Console\Command;
 

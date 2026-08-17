@@ -1,6 +1,6 @@
 # Watchtower SDK for Laravel
 
-`bedaie/watchtower-laravel` — SDK klien untuk platform monitoring **Watchtower**. Pasang pada aplikasi Laravel yang anda mahu pantau; ia menangkap exception, slow query, failed job, scheduled task yang gagal, dan metrik (requests, jobs, mail, cache, HTTP keluar, dsb.), lalu menghantarnya secara berkelompok ke server Watchtower anda.
+`pantau/watchtower-laravel` — SDK klien untuk platform monitoring **Watchtower**. Pasang pada aplikasi Laravel yang anda mahu pantau; ia menangkap exception, slow query, failed job, scheduled task yang gagal, dan metrik (requests, jobs, mail, cache, HTTP keluar, dsb.), lalu menghantarnya secara berkelompok ke server Watchtower anda.
 
 ## Keperluan
 
@@ -9,8 +9,11 @@
 
 ## Pemasangan
 
+Package ini di-hos di GitHub (bukan Packagist), jadi daftar repo VCS dahulu:
+
 ```bash
-composer require bedaie/watchtower-laravel
+composer config repositories.watchtower vcs https://github.com/aminpamelo/watchtower-laravel
+composer require pantau/watchtower-laravel:^1.0
 php artisan watchtower:install
 ```
 

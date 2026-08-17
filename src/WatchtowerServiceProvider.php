@@ -1,21 +1,21 @@
 <?php
 
-namespace Bedaie\Watchtower;
+namespace Pantau\Watchtower;
 
-use Bedaie\Watchtower\Commands\FlushSpoolCommand;
-use Bedaie\Watchtower\Commands\InstallCommand;
-use Bedaie\Watchtower\Commands\TestCommand;
-use Bedaie\Watchtower\Listeners\BreadcrumbListener;
-use Bedaie\Watchtower\Listeners\JobListener;
-use Bedaie\Watchtower\Listeners\LogListener;
-use Bedaie\Watchtower\Listeners\QueryListener;
-use Bedaie\Watchtower\Listeners\ScheduledTaskListener;
-use Bedaie\Watchtower\Middleware\WatchtowerMiddleware;
-use Bedaie\Watchtower\Support\CircuitBreaker;
-use Bedaie\Watchtower\Support\ReleaseDetector;
-use Bedaie\Watchtower\Support\Scrubber;
-use Bedaie\Watchtower\Support\Spool;
-use Bedaie\Watchtower\Support\StackTraceParser;
+use Pantau\Watchtower\Commands\FlushSpoolCommand;
+use Pantau\Watchtower\Commands\InstallCommand;
+use Pantau\Watchtower\Commands\TestCommand;
+use Pantau\Watchtower\Listeners\BreadcrumbListener;
+use Pantau\Watchtower\Listeners\JobListener;
+use Pantau\Watchtower\Listeners\LogListener;
+use Pantau\Watchtower\Listeners\QueryListener;
+use Pantau\Watchtower\Listeners\ScheduledTaskListener;
+use Pantau\Watchtower\Middleware\WatchtowerMiddleware;
+use Pantau\Watchtower\Support\CircuitBreaker;
+use Pantau\Watchtower\Support\ReleaseDetector;
+use Pantau\Watchtower\Support\Scrubber;
+use Pantau\Watchtower\Support\Spool;
+use Pantau\Watchtower\Support\StackTraceParser;
 use Illuminate\Auth\Events\Failed;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Auth\Events\Logout;

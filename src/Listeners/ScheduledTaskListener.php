@@ -1,8 +1,8 @@
 <?php
 
-namespace Bedaie\Watchtower\Listeners;
+namespace Pantau\Watchtower\Listeners;
 
-use Bedaie\Watchtower\Recorder;
+use Pantau\Watchtower\Recorder;
 use Illuminate\Console\Events\ScheduledTaskFailed;
 use Illuminate\Console\Events\ScheduledTaskFinished;
 use Throwable;

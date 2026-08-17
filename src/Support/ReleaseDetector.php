@@ -1,6 +1,6 @@
 <?php
 
-namespace Bedaie\Watchtower\Support;
+namespace Pantau\Watchtower\Support;
 
 use Throwable;
 

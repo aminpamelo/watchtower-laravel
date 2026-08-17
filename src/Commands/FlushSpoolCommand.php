@@ -1,10 +1,10 @@
 <?php
 
-namespace Bedaie\Watchtower\Commands;
+namespace Pantau\Watchtower\Commands;
 
-use Bedaie\Watchtower\Support\CircuitBreaker;
-use Bedaie\Watchtower\Support\Spool;
-use Bedaie\Watchtower\Watchtower;
+use Pantau\Watchtower\Support\CircuitBreaker;
+use Pantau\Watchtower\Support\Spool;
+use Pantau\Watchtower\Watchtower;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
@@ -53,7 +53,7 @@ class FlushSpoolCommand extends Command
 
             try {
                 $response = Http::withToken($token)
-                    ->withHeaders(['X-Watchtower-Sdk' => 'bedaie/watchtower-laravel@'.Watchtower::VERSION])
+                    ->withHeaders(['X-Watchtower-Sdk' => 'pantau/watchtower-laravel@'.Watchtower::VERSION])
                     ->timeout((int) config('watchtower.transport.timeout', 5))
                     ->acceptJson()
                     ->post($endpoint, $payload);

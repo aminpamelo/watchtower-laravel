@@ -1,8 +1,8 @@
 <?php
 
-namespace Bedaie\Watchtower\Middleware;
+namespace Pantau\Watchtower\Middleware;
 
-use Bedaie\Watchtower\Recorder;
+use Pantau\Watchtower\Recorder;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\RedirectResponse;

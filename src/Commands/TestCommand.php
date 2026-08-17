@@ -1,9 +1,9 @@
 <?php
 
-namespace Bedaie\Watchtower\Commands;
+namespace Pantau\Watchtower\Commands;
 
-use Bedaie\Watchtower\Recorder;
-use Bedaie\Watchtower\Watchtower;
+use Pantau\Watchtower\Recorder;
+use Pantau\Watchtower\Watchtower;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Http;
 use RuntimeException;
@@ -44,7 +44,7 @@ class TestCommand extends Command
 
         try {
             $response = Http::withToken($token)
-                ->withHeaders(['X-Watchtower-Sdk' => 'bedaie/watchtower-laravel@'.Watchtower::VERSION])
+                ->withHeaders(['X-Watchtower-Sdk' => 'pantau/watchtower-laravel@'.Watchtower::VERSION])
                 ->timeout((int) config('watchtower.transport.timeout', 5))
                 ->acceptJson()
                 ->post($endpoint, $payload);

@@ -1,8 +1,8 @@
 <?php
 
-namespace Bedaie\Watchtower\Listeners;
+namespace Pantau\Watchtower\Listeners;
 
-use Bedaie\Watchtower\Recorder;
+use Pantau\Watchtower\Recorder;
 use Illuminate\Log\Events\MessageLogged;
 use Throwable;
 

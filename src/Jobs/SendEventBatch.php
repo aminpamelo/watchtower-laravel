@@ -1,9 +1,9 @@
 <?php
 
-namespace Bedaie\Watchtower\Jobs;
+namespace Pantau\Watchtower\Jobs;
 
-use Bedaie\Watchtower\Support\CircuitBreaker;
-use Bedaie\Watchtower\Watchtower;
+use Pantau\Watchtower\Support\CircuitBreaker;
+use Pantau\Watchtower\Watchtower;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
@@ -54,7 +54,7 @@ class SendEventBatch implements ShouldQueue
 
             try {
                 $response = Http::withToken($token)
-                    ->withHeaders(['X-Watchtower-Sdk' => 'bedaie/watchtower-laravel@'.Watchtower::VERSION])
+                    ->withHeaders(['X-Watchtower-Sdk' => 'pantau/watchtower-laravel@'.Watchtower::VERSION])
                     ->timeout((int) config('watchtower.transport.timeout', 5))
                     ->acceptJson()
                     ->post($endpoint, $this->payload);
