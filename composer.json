@@ -6,7 +6,7 @@
     "keywords": ["laravel", "monitoring", "error-tracking"],
     "require": {
         "php": "^8.2",
-        "laravel/framework": "^11.0|^12.0"
+        "laravel/framework": "^11.0|^12.0|^13.0"
     },
     "autoload": {
         "psr-4": {
