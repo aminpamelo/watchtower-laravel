@@ -1,0 +1,25 @@
+{
+    "name": "bedaie/watchtower-laravel",
+    "description": "Watchtower monitoring SDK for Laravel applications",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["laravel", "monitoring", "error-tracking"],
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^11.0|^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bedaie\\Watchtower\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bedaie\\Watchtower\\WatchtowerServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
